@@ -1,0 +1,24 @@
+{
+    "name": "ADLS_csv_to_adf_pipeline",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "LS_AzureBlobStorage",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "DelimitedText",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobStorageLocation",
+                "fileName": "customers.csv",
+                "container": "sample-data-for-first-adf-pipeline"
+            },
+            "columnDelimiter": ",",
+            "escapeChar": "\\",
+            "firstRowAsHeader": true,
+            "quoteChar": "\""
+        },
+        "schema": []
+    },
+    "type": "Microsoft.DataFactory/factories/datasets"
+}
